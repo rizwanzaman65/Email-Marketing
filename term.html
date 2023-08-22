@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Campaign Monitor: Email Marketing Platform & Services</title>
+
+    <script>document.documentElement.setAttribute('data-useragent', navigator.userAgent);</script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta property="fb:admins" content="772549552" />
+    <meta name="google-site-verification" content="zyTuG88Wn1p_b0kNzl1uKJpZyeTZ0Sl6432CMZxPWcs" />
+    <meta name="msvalidate.01" content="A5352BC31C70117F51CB5B8263B6615F" />
+
+    <script type="text/javascript">window.COOKIE_BRAND_ID = "CM"</script>
+    <meta property="og:image"
+        content="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/brand/campaignmonitor.jpg" />
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=1" />
+
+
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+                                           w[l] = w[l] || []; w[l].push({
+                                               'gtm.start':
+                                                   new Date().getTime(), event: 'gtm.js'
+                                           }); var f = d.getElementsByTagName(s)[0],
+                                               j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                                                   'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                                       })(window, document, 'script', 'dataLayer', 'GTM-T98KGXJ');</script>
+    <!-- End Google Tag Manager -->
+
+
+
+
+    <script type="text/javascript">
+        function _addScript(d, s, p) { var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = p; f.parentNode.insertBefore(j, f); }
+        // SUPPORTING FUNCTIONS
+
+        function getUTMParameters() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+(utm_[^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        function isEmptyObj(obj) {
+            for (var prop in obj) {
+                if (obj.hasOwnProperty(prop))
+                    return false;
+            }
+
+            return true;
+        }
+
+        function getQuerystringParameterByName(name) {
+            var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+        }
+
+        function getLocationFromLinkElement(href) {
+            var l = document.createElement("a");
+            l.href = href;
+            return l;
+        }
+
+        function get_cookie(cookie_name) {
+            var results = document.cookie.match(cookie_name + '=(.*?)(;|$)');
+            if (results)
+                return (unescape(results[1]));
+            else
+                return null;
+        }
+
+        function set_cookie(name, value, days) {
+            var cookie_string = name + "=" + escape(value);
+            if (typeof (days) === 'undefined') days = 365;
+
+            var expires = new Date();
+            expires.setDate(expires.getDate() + (days));
+            cookie_string += "; expires=" + expires.toGMTString();
+            cookie_string += "; path=" + escape("/");
+
+            if (/^localhost(\:\d+)?$/.test(location.host)) {
+                cookie_string += "; domain=";
+            } else {
+                var host = location.host;
+                host = host.split('.');
+                host = host.splice((host.length - 2), host.length).join('.');
+                cookie_string += "; domain=" + escape("." + host);
+            }
+
+            document.cookie = cookie_string;
+        }
+
+        function delete_cookie(name) {
+            var delete_string = "";
+            var expires = new Date();
+            expires.setDate(expires.getDate() - (9999));
+            delete_string += "; expires=" + expires.toGMTString();
+            delete_string += "; path=" + escape("/");
+
+            if (/^localhost(\:\d+)?$/.test(location.host)) {
+                delete_string += "; domain=";
+            } else {
+                var host = location.host;
+                host = host.split('.');
+                host = host.splice((host.length - 2), host.length).join('.');
+                delete_string += "; domain=" + escape("." + host);
+            }
+
+            if (typeof (name) !== "undefined") {
+                // Delete single cookie
+                document.cookie = name + "=" + delete_string;
+            } else {
+                // Delete all cookies
+                document.cookie.split(";").forEach(function (c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=" + delete_string); });
+            }
+        }
+
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+
+        // Clean up old cookies
+        delete_cookie("CM-location-data");
+        delete_cookie("CM-location-dv1");
+        delete_cookie("CM-location-dv2");
+        delete_cookie("CM-location-dv3");
+        delete_cookie("CM-location-dv4");
+
+
+
+        var consent_cookie_name = "cookie-accept";
+        var cookie_consent = {};
+        var script_processed = false;
+        Object.defineProperty(cookie_consent, "given", {
+            get() { return document.cookie.match(consent_cookie_name + '=(.*?)(;|$)') || false; },
+            set(consent) {
+                //   * Cookie is currently named _cmgTrkData - if this changes, alert engineering team so they can
+                //   * update their tracking code accordingly
+                if (consent && !script_processed) {
+                    script_processed = true;
+                    _addScript(document, 'script', '//s3-us-west-1.amazonaws.com/global-assetbkt/trk.js');
+
+
+
+                }
+            }
+        });
+        var consented = document.cookie.match(consent_cookie_name + '=(.*?)(;|$)');
+        if (consented) cookie_consent.given = (consented[1] === 'true' || consented[1] === 'implied');
+    </script>
+
+    <link rel="dns-prefetch" href="//i1.campaignmonitor.com">
+    <link rel="dns-prefetch" href="//i3.campaignmonitor.com">
+    <link rel="dns-prefetch" href="//www.googleadservices.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//themes.googleusercontent.com">
+    <link rel="dns-prefetch" href="//cdn.segment.com">
+    <link rel="dns-prefetch" href="//api.segment.io">
+    <link rel="dns-prefetch" href="//cdn.mxpnl.com">
+    <link rel="dns-prefetch" href="//scripts.kissmetrics.com">
+    <link rel="dns-prefetch" href="//www.google.com">
+    <link rel="dns-prefetch" href="//www.google.com.au">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
+    <link rel="dns-prefetch" href="//sjs.bizographics.com">
+    <link rel="dns-prefetch" href="//www.bizographics.com">
+    <link rel="dns-prefetch" href="//imp2.bizographics.com">
+    <link rel="dns-prefetch" href="//connect.facebook.net">
+    <link rel="dns-prefetch" href="//secure.quantserve.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//platform.twitter.com">
+    <link rel="dns-prefetch" href="//analytics.twitter.com">
+    <link rel="dns-prefetch" href="//trk.kissmetrics.com">
+    <link rel="dns-prefetch" href="//dnn506yrbagrg.cloudfront.net">
+    <link rel="dns-prefetch" href="//analytics.twitter.com">
+    <link rel="dns-prefetch" href="//t.co">
+    <link rel="dns-prefetch" href="//api.mixpanel.com">
+    <link rel="dns-prefetch" href="//www.facebook.com">
+    <link rel="dns-prefetch" href="//stats.g.doubleclick.net">
+    <link rel="dns-prefetch" href="//googleads.g.doubleclick.net">
+    <link rel="dns-prefetch" href="//pixel.quantserve.com">
+    <link rel="dns-prefetch" href="//s.adroll.com">
+    <link rel="dns-prefetch" href="//d.adroll.com">
+    <link rel="dns-prefetch" href="//secure.adnxs.com">
+    <link rel="dns-prefetch" href="//ads.yahoo.com">
+    <!--[if lt IE 9]>
+          <script src="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/js/_template/html5.js?ver=309"></script>
+          <link href="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/style/ie.css?ver=309" rel="stylesheet" />
+        	      <![endif]-->
+    <!--[if IE 9]>
+		    <link href="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/style/ie-9.css?ver=309" rel="stylesheet" />
+        <link rel="prefetch" href="//i1.campaignmonitor.com"><link rel="prefetch" href="//i3.campaignmonitor.com"><link rel="prefetch" href="//www.googleadservices.com"><link rel="prefetch" href="//fonts.googleapis.com"><link rel="prefetch" href="//themes.googleusercontent.com"><link rel="prefetch" href="//cdn.segment.com"><link rel="prefetch" href="//api.segment.io"><link rel="prefetch" href="//cdn.mxpnl.com"><link rel="prefetch" href="//scripts.kissmetrics.com"><link rel="prefetch" href="//www.google.com"><link rel="prefetch" href="//www.google.com.au"><link rel="prefetch" href="//www.google-analytics.com"><link rel="prefetch" href="//sjs.bizographics.com"><link rel="prefetch" href="//www.bizographics.com"><link rel="prefetch" href="//imp2.bizographics.com"><link rel="prefetch" href="//connect.facebook.net"><link rel="prefetch" href="//secure.quantserve.com"><link rel="prefetch" href="//fonts.gstatic.com"><link rel="prefetch" href="//platform.twitter.com"><link rel="prefetch" href="//analytics.twitter.com"><link rel="prefetch" href="//trk.kissmetrics.com"><link rel="prefetch" href="//dnn506yrbagrg.cloudfront.net"><link rel="prefetch" href="//analytics.twitter.com"><link rel="prefetch" href="//t.co"><link rel="prefetch" href="//api.mixpanel.com"><link rel="prefetch" href="//www.facebook.com"><link rel="prefetch" href="//stats.g.doubleclick.net"><link rel="prefetch" href="//googleads.g.doubleclick.net"><link rel="prefetch" href="//pixel.quantserve.com"><link rel="prefetch" href="//s.adroll.com"><link rel="prefetch" href="//d.adroll.com"><link rel="prefetch" href="//secure.adnxs.com"><link rel="prefetch" href="//ads.yahoo.com">        <![endif]-->
+    <link href="3.css" rel="stylesheet" />
+
+    <link href="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/ico/favicon.ico?ver=309"
+        rel="shortcut icon" />
+    <link href="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/ico/apple-touch-icon.png?ver=309"
+        rel="apple-touch-icon-precomposed" />
+    <link href="https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/ico/cm-marque.svg" rel="mask-icon"
+        color="#00354f">
+
+    <script type="text/javascript">
+        /* For running inline once jQuery is loaded */
+        function defer(func) {
+            if (window.jQuery)
+                func();
+            else
+                setTimeout(function () { defer(func) }, 50);
+        }
+    </script>
+
+    <link href="https://plus.google.com/+campaignmonitor" rel="publisher" />
+
+    <link rel="preload"
+        href="/wp-content/themes/cm-theme/assets/images/home/2021_cm_web_homepage_hero-stackofemails.png" as="image">
+
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+    <!-- This site is optimized with the Yoast SEO plugin v20.12 - https://yoast.com/wordpress/plugins/seo/ -->
+    <meta name="description"
+        content="Get results with email marketing. Gain loyal customers and manage customer journeys with our best-in-class email campaign software." />
+    <link rel="canonical" href="https://www.campaignmonitor.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Email Marketing | Email Software | Campaign Monitor" />
+    <meta property="og:description"
+        content="Get results with email marketing. Gain loyal customers and manage customer journeys with our best-in-class email campaign software." />
+    <meta property="og:url" content="https://www.campaignmonitor.com/" />
+    <meta property="og:site_name" content="Campaign Monitor" />
+    <meta property="article:modified_time" content="2023-02-23T20:01:40+00:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- / Yoast SEO plugin. -->
+
+
+    <link rel="alternate" type="application/rss+xml" title="Campaign Monitor &raquo; Feed"
+        href="https://www.campaignmonitor.com/feed/" />
+    <link rel="alternate" type="application/rss+xml" title="Campaign Monitor &raquo; Comments Feed"
+        href="https://www.campaignmonitor.com/comments/feed/" />
+    <script type="text/javascript">
+        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/www.campaignmonitor.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2.2" } };
+        /*! This file is auto-generated */
+        !function (e, a, t) { var n, r, o, i = a.createElement("canvas"), p = i.getContext && i.getContext("2d"); function s(e, t) { p.clearRect(0, 0, i.width, i.height), p.fillText(e, 0, 0); e = i.toDataURL(); return p.clearRect(0, 0, i.width, i.height), p.fillText(t, 0, 0), e === i.toDataURL() } function c(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (o = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, r = 0; r < o.length; r++)t.supports[o[r]] = function (e) { if (p && p.fillText) switch (p.textBaseline = "top", p.font = "600 32px Arial", e) { case "flag": return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !s("\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff", "\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff") }return !1 }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (e = t.source || {}).concatemoji ? c(e.concatemoji) : e.wpemoji && e.twemoji && (c(e.twemoji), c(e.wpemoji))) }(window, document, window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 0.07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='wp-block-library-css' href='4.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='classic-theme-styles-css' href='5.css' type='text/css' media='all' />
+    <style id='global-styles-inline-css' type='text/css'>
+        body {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');
+            --wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');
+            --wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');
+            --wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');
+            --wp--preset--duotone--midnight: url('#wp-duotone-midnight');
+            --wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');
+            --wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');
+            --wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+            --wp--preset--spacing--20: 0.44rem;
+            --wp--preset--spacing--30: 0.67rem;
+            --wp--preset--spacing--40: 1rem;
+            --wp--preset--spacing--50: 1.5rem;
+            --wp--preset--spacing--60: 2.25rem;
+            --wp--preset--spacing--70: 3.38rem;
+            --wp--preset--spacing--80: 5.06rem;
+            --wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
+            --wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
+            --wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
+            --wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
+        }
+
+        :where(.is-layout-flex) {
+            gap: 0.5em;
+        }
+
+        body .is-layout-flow>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-flow>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-flow>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        body .is-layout-constrained>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        body .is-layout-constrained>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+            max-width: var(--wp--style--global--content-size);
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        body .is-layout-constrained>.alignwide {
+            max-width: var(--wp--style--global--wide-size);
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        body .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        body .is-layout-flex>* {
+            margin: 0;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+
+        .wp-block-navigation a:where(:not(.wp-element-button)) {
+            color: inherit;
+        }
+
+        :where(.wp-block-columns.is-layout-flex) {
+            gap: 2em;
+        }
+
+        .wp-block-pullquote {
+            font-size: 1.5em;
+            line-height: 1.6;
+        }
+    </style>
+    <link rel='stylesheet' id='contact-form-7-css' href='6.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='cmg-announcement-banner-css-css' href='7.css' type='text/css' media='all' />
+    <script type='text/javascript' src='6.js'
+        id='jquery-core-js'></script>
+    <script type='text/javascript'
+        src='7.js'
+        id='jquery-migrate-js'></script>
+    <link rel="https://api.w.org/" href="https://www.campaignmonitor.com/wp-json/" />
+    <link rel="alternate" type="application/json" href="https://www.campaignmonitor.com/wp-json/wp/v2/pages/4289" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.campaignmonitor.com/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
+        href="https://www.campaignmonitor.com/wp-includes/wlwmanifest.xml" />
+    <link rel='shortlink' href='https://www.campaignmonitor.com/' />
+    <link rel="alternate" type="application/json+oembed"
+        href="https://www.campaignmonitor.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.campaignmonitor.com%2F" />
+    <link rel="alternate" type="text/xml+oembed"
+        href="https://www.campaignmonitor.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.campaignmonitor.com%2F&#038;format=xml" />
+    <!-- There is no amphtml version available for this URL. --> <!-- comment to allow for deploybot support testing -->
+</head>
+
+<body>
+
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-T98KGXJ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <script type="text/javascript">
+        var environment = "production";
+    </script>
+
+
+    <header>
+
+
+
+
+
+
+        <div class="feat_drop">
+            <div class="fullwidth dark" id="darker">
+                <div class="central">
+                    <div id="topBar">
+                        <div id="cmlogo" class="has-mobile-banner">
+                            <a href="index.html" title="Campaign Monitor" class="home-nav-link">
+                                <!-- Generator: Adobe Illustrator 27.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 1440 200"
+                                    style="enable-background:new 0 0 1440 200;" xml:space="preserve">
+                                    <style type="text/css">
+                                        .st0 {
+                                            fill: #FFFFFF;
+                                        }
+
+                                        .st1 {
+                                            fill: #FFFFFF;
+                                        }
+
+                                        .st2 {
+                                            fill: #7856FF;
+                                        }
+                                    </style>
+                                    <g>
+                                        <g>
+
+
+                                        </g>
+                                        <g>
+
+
+                                        </g>
+                                    </g>
+                                    <g>
+                                        <g>
+
+
+                                        </g>
+                                        <g>
+                                            <path class="st2"
+                                                d="M156.4,29.6c-1.7-2.4-5-3-7.4-1.3L18.7,119.6c1,1.4,2.5,2.3,4.4,2.3l0,0l0,0h129c2.9,0,5.3-2.4,5.3-5.3V32.6    C157.4,31.5,157.1,30.5,156.4,29.6">
+                                            </path>
+                                            <path class="st2"
+                                                d="M26.1,28.3c-2.4-1.7-5.7-1.1-7.4,1.3c-0.6,0.9-1,1.9-1,3v84.1l62-50.8L26.1,28.3z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <a class="menu-link" role="button" aria-expanded="false" aria-label="Mobile navigation button">
+                            <span class="line line-1"></span>
+                            <span class="line line-2"></span>
+                            <span class="line line-3"></span>
+                        </a>
+                        <div class="mobile-banner" id="mobileBanner">
+                            <a href="#" class="cmbtn medbtn primary">Sign
+                                up for free</a>
+                        </div>
+                    </div>
+
+                    <div id="mainNav">
+                        <span id="skipnav"><a href="#content-skip" tabindex="1">Skip to content</a></span>
+                        <ul id="primary" role="navigation" class="primary-nav" aria-label="Primary navigation">
+
+                            <li class="nav_item " role="none">
+                                <a href="pricing.html" id="pricing" class="primary-nav-link" role="menuitem"
+                                    aria-label="Pricing">
+                                    Pricing
+                                </a>
+                            </li>
+                            <li class="nav_item ">
+                                <a href="privacy.html" id="resources" class="primary-nav-link nav_item"
+                                    aria-label="Resources">
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li class="nav_item ">
+                                <a href="term.html" id="customers" class="primary-nav-link" aria-label="Customers">
+                                    Terms & Conditions
+                                </a>
+                            </li>
+                            <li class="nav_item ">
+                                <a href="contact.html" id="gallery" class="primary-nav-link" aria-label="Gallery">
+                                    Contact Us
+                                </a>
+                            </li>
+
+
+                         
+                        </ul>
+                        <div role="navigation" class="secondary-nav" aria-label="Secondary navigation">
+                            <ul id="second" role="menu" aria-label="Secondary navigation">
+                                <li role="none">
+                                    <a href="#" class="cmbtn secondary"
+                                        role="menuitem" aria-label="Sign up">
+                                        Try it free
+                                    </a>
+                                </li>
+                                <li role="none">
+                                    <a href="https://login.createsend.com/l" id="login" class="primary-nav-link"
+                                        role="menuitem" aria-label="Log in">
+
+                                    </a>
+                                </li>
+                                <li class="nav_item nav_item-secondary ">
+                                    <a id="contact" class="primary-nav-link nav_item open-subnav hide-mobile"
+                                        role="button" aria-label="Contact us menu" tabindex="0">
+
+                                    </a>
+                                    <div class='subnav' role="navigation">
+                                        <div class='backing'></div>
+                                        <div class='central'>
+                                            <span class="logo">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="20"
+                                                    viewBox="0 0 2594 259">
+                                                    <g fill="none" fill-rule="evenodd">
+                                                        <path fill="#002B45"
+                                                            d="M1278.09.78c-10.33 0-18.28 2.22-18.28 11.77v9.34c0 9.55 7.95 12.02 18.28 12.02 10.36 0 18.3-2.47 18.3-12.01v-9.35c0-9.55-7.94-11.77-18.3-11.77M1285.53 52.6h-14.58a8.76 8.76 0 0 0-8.76 8.75v125.26a8.77 8.77 0 0 0 8.76 8.76h14.58a8.76 8.76 0 0 0 8.75-8.76V61.35a8.75 8.75 0 0 0-8.75-8.75M859.76 51.14c-21.21 0-36.06 9.28-47.19 24.13-7.41-14.85-21.74-24.13-41.89-24.13-21.47 0-33.66 11.67-42.67 24.13V61.34a8.74 8.74 0 0 0-8.76-8.74h-14.57a8.75 8.75 0 0 0-8.75 8.74v125.27a8.76 8.76 0 0 0 8.75 8.76h14.57a8.75 8.75 0 0 0 8.75-8.76v-71.56c0-21.48 12.2-34.75 29.96-34.75s28.37 12.2 28.37 33.95v72.36a8.76 8.76 0 0 0 8.75 8.76h14.57a8.75 8.75 0 0 0 8.75-8.76v-71.56c0-22.55 12.46-34.75 29.96-34.75 18.03 0 28.36 11.95 28.36 34.2l.01 72.1a8.76 8.76 0 0 0 8.74 8.77h14.58a8.76 8.76 0 0 0 8.75-8.76v-81.92c0-34.2-18.55-53.55-49.04-53.55M2213.03.78c-10.33 0-18.3 2.22-18.3 11.77v9.34c0 9.55 7.97 12.02 18.3 12.02 10.35 0 18.3-2.47 18.3-12.01v-9.35c0-9.55-7.95-11.77-18.3-11.77M2220.46 52.6h-14.58a8.75 8.75 0 0 0-8.75 8.75v125.26a8.76 8.76 0 0 0 8.75 8.76h14.58a8.75 8.75 0 0 0 8.73-8.76V61.35c0-4.84-3.9-8.75-8.73-8.75M453.82 37.99A62.54 62.54 0 0 1 492 50.82a8.37 8.37 0 0 0 11.05-.74l11.22-11.22a8.43 8.43 0 0 0-.7-12.54 94.61 94.61 0 0 0-59.74-20.88c-52.82 0-95.8 42.97-95.8 95.81 0 52.83 42.98 95.81 95.8 95.81a94.66 94.66 0 0 0 59.74-20.88 8.39 8.39 0 0 0 .7-12.53l-11.23-11.21a8.43 8.43 0 0 0-11.05-.75 62.53 62.53 0 0 1-38.16 12.82 63.32 63.32 0 0 1-63.25-63.26A63.33 63.33 0 0 1 453.82 38M1419.69 124.43c0 26.78-18.39 44.82-39.33 44.82-21.22 0-37.87-17.24-37.87-44.82v-.53c0-27.03 16.93-44.79 37.87-44.79 20.94 0 39.33 18.02 39.33 44.79v.53zm26.24-71.83h-14.57a8.75 8.75 0 0 0-8.76 8.75V75.4c-10.33-14.58-24.92-24.12-47.72-24.12-32.87 0-64.94 25.98-64.94 72.63v.53c0 46.4 31.8 72.64 64.94 72.64 23.32 0 37.91-10.7 47.72-23.7l.26-.33V186c0 24.13-18.63 46.22-44.61 46.22-15.96 0-30.6-7.4-37.92-19.83a8.75 8.75 0 0 0-12-2.93l-6.16 4.09a8.78 8.78 0 0 0-2.97 12.03c12.05 19.7 33.41 32.8 60.45 32.8 46.41 0 75.03-33.13 75.03-72.9V61.35a8.75 8.75 0 0 0-8.75-8.75zM2124.79 51.27c-21.76 0-34.74 11.03-43.75 24V61.34a8.75 8.75 0 0 0-8.75-8.74h-14.59a8.75 8.75 0 0 0-8.73 8.74v125.27a8.76 8.76 0 0 0 8.73 8.76h14.59c4.82 0 8.75-3.93 8.75-10.08v-75.42a30.76 30.76 0 1 1 61.51 0v76.74a8.76 8.76 0 0 0 8.73 8.76h14.59a8.76 8.76 0 0 0 8.75-8.76v-81.8c0-32.33-18.3-53.54-49.83-53.54M1553.01 51.27c-21.76 0-34.74 11.03-43.76 24V61.34a8.75 8.75 0 0 0-8.75-8.74h-14.58a8.74 8.74 0 0 0-8.73 8.74v125.27a8.75 8.75 0 0 0 8.73 8.76h14.58c4.83 0 8.75-3.93 8.75-10.08v-75.42a30.76 30.76 0 1 1 61.52 0v76.74a8.76 8.76 0 0 0 8.73 8.76h14.59a8.76 8.76 0 0 0 8.75-8.76v-81.8c0-32.33-18.31-53.54-49.83-53.54M2590.27 52.92a9.3 9.3 0 0 0-.91-.37 42 42 0 0 0-10.38-1.28 42.07 42.07 0 0 0-37.94 23.88v-13.8a8.75 8.75 0 0 0-8.75-8.75h-14.59a8.77 8.77 0 0 0-8.75 8.75v125.27a8.78 8.78 0 0 0 8.75 8.75h14.59a8.76 8.76 0 0 0 8.75-8.75v-53.03c0-42.81 22.35-50.52 35.24-49.47 2.53.2 4.75.55 6.64.8a32.5 32.5 0 0 0 1.62.13c3 0 5.5-2.13 6.07-4.96l3.22-20.6a6.19 6.19 0 0 0-3.56-6.57M2000.35 124.24v.45c0 24.48-17.04 44.28-41.92 44.55-24.89-.27-41.93-20.07-41.93-44.55v-.9c0-24.47 17.04-44.28 41.93-44.54 24.88.27 41.92 20.07 41.92 44.55v.44zm-41.92-72.97c-42.95 0-74.48 32.6-74.48 72.63v.69c0 40.02 31.53 72.63 74.48 72.63s74.48-32.61 74.48-72.63v-.7c0-40.01-31.53-72.62-74.48-72.62zM2459.76 124.24v.45c0 24.48-17.04 44.28-41.92 44.55-24.89-.27-41.93-20.07-41.93-44.55v-.9c0-24.47 17.04-44.28 41.93-44.54 24.88.27 41.92 20.07 41.92 44.55v.44zm-41.92-72.97c-42.95 0-74.48 32.6-74.48 72.63v.69c0 40.02 31.53 72.63 74.48 72.63s74.48-32.61 74.48-72.63v-.7c0-40.01-31.53-72.62-74.48-72.62zM1858.59 7.4h-14.63a8.78 8.78 0 0 0-7 3.53l-60.28 82.34-60.27-82.34a8.8 8.8 0 0 0-7.01-3.53h-14.63a8.76 8.76 0 0 0-8.75 8.76v170.45a8.76 8.76 0 0 0 8.75 8.76h14.59a8.76 8.76 0 0 0 8.75-8.76V68.38l53.24 68.3.12.15.43.54h.02a6.35 6.35 0 0 0 9.52 0h.02l.43-.54.12-.15 53.24-68.3V186.6a8.76 8.76 0 0 0 8.75 8.76h14.59a8.76 8.76 0 0 0 8.75-8.76V16.16a8.76 8.76 0 0 0-8.75-8.76M1776.69 139.53h-.01-.01.02M1043.5 124.43c0 26.78-18.39 44.82-39.33 44.82-21.22 0-37.87-17.24-37.87-44.82v-.53c0-27.03 16.92-44.79 37.87-44.79 20.94 0 39.33 18.03 39.33 44.79v.53zm-32.39-73.16c-22.8 0-37.38 9.41-47.72 24V61.35a8.74 8.74 0 0 0-8.75-8.75h-14.57a8.74 8.74 0 0 0-8.75 8.75V245.2a8.76 8.76 0 0 0 8.75 8.77h14.57a8.76 8.76 0 0 0 8.75-8.77v-72.16c9.82 13 24.4 24.03 47.72 24.03 33.14 0 64.95-26.25 64.95-72.64v-.53c0-46.65-32.08-72.63-64.95-72.63zM633.65 124.43c0 26.78-18.4 44.82-39.34 44.82-21.21 0-37.86-17.24-37.86-44.82v-.53c0-27.03 16.92-44.79 37.86-44.79 20.95 0 39.34 18.03 39.34 44.79v.53zm41.12 48.27a6.18 6.18 0 0 1-6.18-6.18V61.35a8.75 8.75 0 0 0-8.75-8.75h-14.58a8.75 8.75 0 0 0-8.75 8.75v13.92c-10.34-14.58-24.92-24-47.72-24-32.87 0-64.95 25.98-64.95 72.63v.53c0 46.4 31.81 72.64 64.95 72.64 24.02 0 40.96-10.77 48.25-24.03a30.78 30.78 0 0 0 29.59 22.33h8.14a6.18 6.18 0 0 0 6.19-6.18v-10.3a6.18 6.18 0 0 0-6.19-6.19zM1199.56 124.43c0 26.78-18.4 44.82-39.34 44.82-21.21 0-37.86-17.24-37.86-44.82v-.53c0-27.03 16.92-44.79 37.86-44.79 20.94 0 39.34 18.03 39.34 44.79v.53zm41.12 48.27a6.18 6.18 0 0 1-6.18-6.18V61.35a8.75 8.75 0 0 0-8.75-8.75h-14.58a8.75 8.75 0 0 0-8.75 8.75v13.92c-10.34-14.58-24.92-24-47.72-24-32.87 0-64.95 25.98-64.95 72.63v.53c0 46.4 31.81 72.64 64.95 72.64 24.01 0 40.96-10.77 48.25-24.03a30.76 30.76 0 0 0 29.59 22.33h8.14a6.18 6.18 0 0 0 6.18-6.18v-10.3a6.18 6.18 0 0 0-6.18-6.19zM2327.48 52.6h-30.46V13.53a6.18 6.18 0 0 0-9.73-5.02l-15.24 10.7a16.26 16.26 0 0 0-7.12 13.46V52.6h-10.33a8.77 8.77 0 0 0-8.77 8.74v9.02a8.77 8.77 0 0 0 8.77 8.75h10.33v77.02c0 30.75 16.68 41.09 40.3 41.09 12.51 0 25.37-4.84 25.37-4.84s4.36-1.3 3.25-6.38c-.37-1.74-2.55-13.73-2.55-13.73-.53-2.95-1.75-5.26-5.92-4.63-2.05.33-5.93.94-11.15.94-10.87-.03-17.21-5.03-17.21-17.5V79.11h30.46a8.74 8.74 0 0 0 8.75-8.75v-9.02c0-4.81-3.9-8.74-8.75-8.74"
+                                                            class="logo-color" />
+                                                        <path fill="#7856FF"
+                                                            d="M256.33 24.54a9.8 9.8 0 0 0-13.67-2.4L1.88 190.71a9.78 9.78 0 0 0 8.03 4.18l.01.01h548.3c5.42 0 9.81-4.4 9.81-9.82V30a9.8 9.8 0 0 0-1.78-5.48M15.56 22.13A9.81 9.81 0 0 0 .13 30v155.37l114.63-93.9-99.19-69.36"
+                                                            class="envelope-color" />
+                                                    </g>
+                                                </svg> </span>
+                                            <span class="close"></span>
+                                            <div class="block">
+                                                <div class="title small">ASK US YOUR QUESTIONS</div>
+                                                <a aria-label="Request a live demo" class="sublink"
+                                                    href='https://www.campaignmonitor.com/demo/direct/?sv=home'>Request
+                                                    a live demo</a>
+                                                <a aria-label="Contact Sales" class="sublink"
+                                                    href='https://www.campaignmonitor.com/contact-sales/?sv=home'>Contact
+                                                    the sales team</a>
+                                                <a aria-label="Contact Campaign Monitor Support" class="sublink"
+                                                    href='https://help.campaignmonitor.com/how-to-get-help'>Contact the
+                                                    support team</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </header>
+    <div id="content-skip"></div>
+
+    <script type="application/ld+json">
+{
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://www.campaignmonitor.com/",
+            "mainEntityOfPage": "https://www.campaignmonitor.com/",
+            "@id": "#campaignmonitororg",
+            "name": "Campaign Monitor",
+            "parentOrganization": {
+                "@type": "Organization",
+                "name": "Marigold"
+            },
+            "foundingDate": "2004-09-01",
+            "founders": [
+                {
+                  "@type": "Person",
+                  "name": "Ben Richardson"
+                },
+                {
+                  "@type": "Person",
+                  "name": "David Greiner"
+                }
+            ],
+            "description": "Campaign Monitor makes it easy for you to create, send, and optimize your email marketing campaigns.",
+            "logo": {
+                "@type": "imageObject",
+                "url": "https://www.campaignmonitor.com/wp-content/themes/cm-theme/assets/images/annual-report/2019/CM_horizontal_logo_lightBG-01.png",
+                "width": "1639px",
+                "height": "163px",
+                "caption": "Campaign Monitor Logo"
+            },
+            "sameAs": [      
+                "https://www.facebook.com/campaignmonitor",             
+                "https://www.instagram.com/campaign.monitor/",
+                "https://twitter.com/campaignmonitor",
+                "https://www.linkedin.com/company/campaign-monitor/",
+                "https://www.youtube.com/channel/UCOA6q0Gi4v3YCi3emARZIbQ"
+            ],
+            "contactPoint": { 
+                "contactType": "Sales",
+                "telephone": "+1-888-533-8098"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "11 Lea Ave",
+                "addressLocality": "Nashville",
+                "addressRegion": "TN",
+                "postalCode": "37210"
+            }
+        }
+</script>
+
+    <section class="fullwidth header-anchor shorthead" id="banner" style="background-color: #152035;">
+        <div class="inner">
+            <div class="container">
+                <br>
+                <h3>Email Marketing Terms & Conditions</h3>
+                <br>
+                <p>
+                    Welcome to our email marketing services. By using our services, you agree to comply with the following terms and conditions, which govern the use of our platform for sending commercial electronic messages to your subscribers.
+                </p>
+                <h5>1. Permission-Based Email</h5>
+                <p>
+                    You must only send emails to recipients who have explicitly opted to receive communications from you. Purchased email lists or harvesting email addresses through automated means are strictly prohibited. It is your responsibility to ensure that you have valid consent from your subscribers to send them commercial emails.
+                </p>
+        
+                <h5>2. Unsubscribe Mechanism</h5>
+                <p>
+                    Every email sent using our platform must contain a clear and functional unsubscribe mechanism that allows recipients to opt-out from receiving future emails easily. Once a recipient opts-out, you must promptly remove them from your email list and refrain from sending any further emails to that address.
+                </p>
+        
+                <h5>3. Content Compliance</h5>
+                <p>
+                    The content of your emails should adhere to all applicable laws and regulations. Avoid sending spam, offensive, or misleading content. Do not include deceptive subject lines or false header information. Ensure that your emails include your accurate physical address or a valid post office box.
+                </p>
+        
+                <h5>4. Privacy and Data Protection</h5>
+                <p>
+                    We value the privacy of our users. As part of our service, we collect and store personal data of your subscribers. You are solely responsible for obtaining the necessary consents and permissions to collect and use such data for email marketing purposes. Under no circumstances should you share or sell your email lists or personal data of your subscribers to third parties.
+                </p>
+        
+                <h5>5. Email Deliverability</h5>
+                <p>
+                    While we strive to maintain high deliverability rates, we cannot guarantee the delivery of every email sent through our platform. The delivery of emails depends on various factors, including the recipient's email service provider, spam filters, and other technical aspects beyond our control.
+                </p>
+        
+                <h5>6. Prohibited Content</h5>
+                <p>
+                    You may not use our services to send content that promotes violence, discrimination, or illegal activities. Content that infringes on the intellectual property rights of others, or violates any applicable laws or regulations, is strictly prohibited. We reserve the right to suspend or terminate your account if we find any violations of this policy.
+                </p>
+        
+                <h5>7. Compliance with Laws</h5>
+                <p>
+                    You are responsible for complying with all relevant laws and regulations regarding email marketing in your region and the regions of your recipients. This includes but is not limited to compliance with the CAN-SPAM Act (in the United States), GDPR (in the European Union), and CASL (in Canada).
+                </p>
+        
+                <h5>8. Indemnification</h5>
+                <p>
+                    You agree to indemnify and hold harmless our company from any claims, damages, or losses arising from your use of our email marketing services. This includes but is not limited to claims related to your violation of these terms and conditions or any applicable laws or regulations.
+                </p>
+        
+                <h5>9. Modifications to Terms</h5>
+                <p>
+                    We reserve the right to modify these terms and conditions at any time. Any changes will be effective immediately upon posting on this page. It is your responsibility to review these terms regularly to stay informed of any updates.
+                </p>
+        
+                <h5>10. Termination</h5>
+                <p>
+                    We may suspend or terminate your account if we find any violations of these terms or if your use of our services negatively impacts our platform or other users. You may also terminate your account at any time by contacting our support team.
+                </p>
+        
+                <p>
+                    By using our email marketing services, you acknowledge that you have read, understood, and agree to abide by these terms and conditions. If you do not agree with any part of these terms, please refrain from using our services.
+                </p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <footer>
+
+        <div class="central" dynamic="true">
+
+
+
+
+            <div class="sub-footer">
+
+
+                <div class="footnotes">
+                    <div class="social">
+                        <a href="#" target="_blank"
+                            rel="noopener noreferrer" title="Follow us on LinkedIn" class="linkedin">
+                            <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>LinkedIn</title>
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g class="social-color" transform="translate(-715.000000, -378.000000)"
+                                        fill="currentColor">
+                                        <g>
+                                            <g transform="translate(145.000000, 367.000000)">
+                                                <g transform="translate(570.000000, 11.000000)">
+                                                    <g>
+                                                        <path
+                                                            d="M15.3385,15.338 L12.669,15.338 L12.669,11.1605 C12.669,10.1645 12.652,8.883 11.282,8.883 C9.8925,8.883 9.6805,9.9685 9.6805,11.0895 L9.6805,15.338 L7.014,15.338 L7.014,6.748 L9.573,6.748 L9.573,7.9225 L9.61,7.9225 C9.966,7.247 10.837,6.535 12.1355,6.535 C14.839,6.535 15.3385,8.3135 15.3385,10.627 L15.3385,15.338 Z M4.004,5.5745 C3.1465,5.5745 2.455,4.881 2.455,4.026 C2.455,3.1715 3.1465,2.478 4.004,2.478 C4.858,2.478 5.551,3.1715 5.551,4.026 C5.551,4.881 4.858,5.5745 4.004,5.5745 Z M2.667,15.338 L5.3395,15.338 L5.3395,6.748 L2.667,6.748 L2.667,15.338 Z M16.668,0 L1.3275,0 C0.595,0 0,0.581 0,1.298 L0,16.701 C0,17.418 0.595,18 1.3275,18 L16.668,18 C17.402,18 17.9995,17.418 17.9995,16.701 L17.9995,1.298 C17.9995,0.581 17.402,0 16.668,0 L16.668,0 Z">
+                                                        </path>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                            title="Follow us on Twitter" class="twitter">
+                            <svg width="18px" height="15px" viewBox="0 0 18 15" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>Twitter</title>
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g class="social-color" transform="translate(-751.000000, -379.000000)"
+                                        fill="currentColor">
+                                        <g>
+                                            <g transform="translate(145.000000, 367.000000)">
+                                                <g transform="translate(570.000000, 11.000000)">
+                                                    <path
+                                                        d="M52.0165333,5.22450082 C52.0165333,5.06054204 52.0165333,4.8973218 52.0058347,4.73484012 C52.721808,4.19858474 53.3398483,3.53460227 53.8310176,2.77398166 C53.1633381,3.08033479 52.4550545,3.28124108 51.7298105,3.36999401 C52.4935087,2.89656822 53.0650852,2.15195155 53.3381683,1.27471888 C52.6200472,1.71597135 51.8344045,2.02694408 51.0151433,2.19421748 C49.8811496,0.945615395 48.0792444,0.640015644 46.6198326,1.44878102 C45.1604208,2.25754639 44.4064511,3.97954088 44.7807063,5.64916885 C41.8392273,5.49647266 39.098657,4.05782569 37.2410388,1.69126282 C36.2700492,3.42216889 36.7660119,5.63650967 38.3736651,6.74813586 C37.7914761,6.73026845 37.2219806,6.56764321 36.7132407,6.27398477 L36.7132407,6.32199072 C36.7137172,8.12523676 37.9412639,9.67837122 39.6482262,10.0354357 C39.1096365,10.1875333 38.5445437,10.2097669 37.9963607,10.1004283 C38.4756213,11.643578 39.8490566,12.7007142 41.4142102,12.7311545 C40.1187761,13.7853887 38.5184954,14.3576904 36.8708669,14.3559713 C36.5797959,14.3553927 36.289008,14.3371437 36,14.3013183 C37.673003,15.413045 39.6196348,16.0027356 41.6074984,15.9999905 C48.3362112,16.0029447 52.0165333,10.2304137 52.0165333,5.22450082 Z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                            class="facebook" title="Become a fan on Facebook">
+                            <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <title>Facebook</title>
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g class="social-color" transform="translate(-787.000000, -378.000000)"
+                                        fill="currentColor">
+                                        <g>
+                                            <g transform="translate(145.000000, 367.000000)">
+                                                <g transform="translate(570.000000, 11.000000)">
+                                                    <path
+                                                        d="M72.9934244,0 C72.4447142,0 72,0.444714213 72,0.99342438 L72,17.0065082 C72,17.5551509 72.4447142,18 72.9934244,18 L81.6143652,18 L81.6143652,11.0294385 L79.2685888,11.0294385 L79.2685888,8.31286461 L81.6143652,8.31286461 L81.6143652,6.3094925 C81.6143652,3.98462317 83.0342944,2.71866464 85.1082785,2.71866464 C86.1017704,2.71866464 86.9555893,2.79258135 87.2043837,2.82562806 L87.2043837,5.25530265 L85.7659754,5.25597707 C84.6380712,5.25597707 84.4196257,5.79194065 84.4196257,6.5784522 L84.4196257,8.31286461 L87.1096948,8.31286461 L86.7594672,11.0294385 L84.4196257,11.0294385 L84.4196257,18 L89.0065082,18 C89.5551509,18 89.9999326,17.5551509 89.9999326,17.0065082 L89.9999326,0.99342438 C89.9999326,0.444714213 89.5551509,0 89.0065082,0 L72.9934244,0 Z">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+
+                        <a href="#" target="_blank" rel="noopener noreferrer"
+                            title="Follow us on Instagram">
+                            <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+                                <title>Instagram</title>
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g class="social-color" fill="#BEBEC2" fill-rule="nonzero">
+                                        <g id="Emma-Atomic-System">
+                                            <g id="Emma---Organisms">
+                                                <g id="NAVIGATION">
+                                                    <g id="Footer">
+                                                        <g id="Block">
+                                                            <g id="Social-Icons">
+                                                                <g id="instagram">
+                                                                    <path
+                                                                        d="M5.22,0 L12.78,0 C15.66,0 18,2.34 18,5.22 L18,12.78 C18,15.6629263 15.6629263,18 12.78,18 L5.22,18 C2.34,18 0,15.66 0,12.78 L0,5.22 C0,2.33707361 2.33707361,0 5.22,0 L5.22,0 Z M5.04,1.8 C3.25059741,1.8 1.8,3.25059741 1.8,5.04 L1.8,12.96 C1.8,14.751 3.249,16.2 5.04,16.2 L12.96,16.2 C14.7494026,16.2 16.2,14.7494026 16.2,12.96 L16.2,5.04 C16.2,3.249 14.751,1.8 12.96,1.8 L5.04,1.8 L5.04,1.8 Z M13.725,3.15 C14.3463203,3.15 14.85,3.65367965 14.85,4.275 C14.85,4.89632035 14.3463203,5.4 13.725,5.4 C13.1036797,5.4 12.6,4.89632035 12.6,4.275 C12.6,3.65367965 13.1036797,3.15 13.725,3.15 L13.725,3.15 Z M9,4.5 C11.4852813,4.5 13.5,6.51471863 13.5,9 C13.5,11.4852813 11.4852813,13.5 9,13.5 C6.51471863,13.5 4.5,11.4852813 4.5,9 C4.5,6.51471863 6.51471863,4.5 9,4.5 L9,4.5 Z M9,6.3 C7.50883118,6.3 6.3,7.50883118 6.3,9 C6.3,10.4911688 7.50883118,11.7 9,11.7 C10.4911688,11.7 11.7,10.4911688 11.7,9 C11.7,7.50883118 10.4911688,6.3 9,6.3 Z"
+                                                                        id="Shape"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="foot-line">
+
+                        </a> <span class="sep"></span> <span class="right">&copy;
+                            2023 All Rights Reserved</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cm-group">
+                <ul>
+                    <a href="pricing.html" class="policies"
+                        style="font-size: 14px; color: white; padding: 20px;">Pricing</a> <span
+                        class="first-sep"></span>
+
+                    <a href="privacy.html" class="policies"
+                        style="font-size: 14px; color: white;  padding: 20px;">Privacy Policy</a> <span
+                        class="first-sep"></span>
+
+                    <a href="term.html" class="policies"
+                        style="font-size: 14px; color: white;  padding: 20px;">Terms & Conditions</a> <span
+                        class="first-sep"></span>
+
+                    <a href="contact.html" class="policies"
+                        style="font-size: 14px; color: white;  padding: 20px;">Contact Us</a> <span
+                        class="first-sep"></span>
+                </ul>
+                <div class="logos">
+                    <br> <br> <br>                    <br> <br> <br>
+                    <a href="https://meetmarigold.com/" style="color: white; font-size: 40px;"><b> Logo </b></a>
+                </div>
+            </div>
+
+        </div>
+        <br class="clear" />
+    </footer>
+    <div id="consent_blackbar"></div>
+
+
+
+    <script type="text/javascript">
+        window.cm_PROD = true;
+    </script>
+    <script defer type="text/javascript"
+        src="8.js"></script>
+
+    <!-- Tracking -->Lite
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 975651034;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+    /* ]]> */
+    </script>
+    <div style="display:none">
+        <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+    </div>
+    <noscript>
+        <div style="display:inline;"><img height="1" width="1" style="border-style:none;" alt=""
+                src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/975651034/?value=0&amp;guid=ON&amp;script=0" />
+        </div>
+    </noscript>
+    <!-- /Tracking -->
+
+    <!-- WP_FOOTER -->
+    <script type='text/javascript'
+        src='10.js'
+        id='swv-js'></script>
+    <script type='text/javascript' id='contact-form-7-js-extra'>
+        /* <![CDATA[ */
+        var wpcf7 = { "api": { "root": "https:\/\/www.campaignmonitor.com\/wp-json\/", "namespace": "contact-form-7\/v1" }, "cached": "1" };
+/* ]]> */
+    </script>
+    <script type='text/javascript'
+        src='11.js'
+        id='contact-form-7-js'></script>
+    <script type='text/javascript'
+        src='12.js'
+        id='cmg-announcement-banner-js-js'></script>
+    <!-- END WP_FOOTER -->
+    <!-- Comment for buddy deployment -->
+</body>
+
+</html>
